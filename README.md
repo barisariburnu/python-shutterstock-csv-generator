@@ -8,9 +8,9 @@ CSV Generator creates csv files with metadata for sharing vectors and photos on 
 python main.py [PATH] [CATEGORY] [TAG_GROUP]
 ```
 
-# Tag Groups
+## Tag Groups
 
 Tags determined by tag groups are added automatically.
 
-| Flag 	    | Symbol   	| Map    	|
-|---    	|---    	|---    	|
+| Flag | Symbol | Map |
+| ---- | ------ | --- |
