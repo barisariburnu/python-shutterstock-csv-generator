@@ -17,7 +17,7 @@ class ShutterStock:
             ),
             ",".join(
                 [
-                    f'"{self.data["filename"]}-4096.jpg"',
+                    f'"{self.data["filename"]}.jpg"',
                     f'"{self.data["jpg_title"].strip()}"',
                     f'"{self.data["keywords"]}"',
                     f'"{self.data["category"]}"',
@@ -46,7 +46,7 @@ class AdobeStock:
             ),
             ",".join(
                 [
-                    f'"{self.data["filename"]}-4096.jpg"',
+                    f'"{self.data["filename"]}.jpg"',
                     f'"{self.data["jpg_title"].strip()}"',
                     f'"{self.data["keywords"]}"',
                     f'{self.data["category_id"]}',

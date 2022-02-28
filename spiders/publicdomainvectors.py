@@ -72,21 +72,21 @@ class CsvGenerator:
             filename = os.path.splitext(os.path.basename(f))[0]
             extension = os.path.splitext(os.path.basename(f))[1]
 
-            if extension not in ['.eps']:
-                continue
+            try:
+                html = get_photo_details(filename=filename)
+                data = parse_photo_details(html=html)
+                data['filename'] = filename
+                data['category'] = self.category
+                data['category_id'] = self.category_id
 
-            html = get_photo_details(filename=filename)
-            data = parse_photo_details(html=html)
-            data['filename'] = filename
-            data['category'] = self.category
-            data['category_id'] = self.category_id
+                shutter_stock = ShutterStock(data)
+                shutter_stock_data.extend(shutter_stock.to_array())
+                adobe_stock = AdobeStock(data)
+                adobe_stock_data.extend(adobe_stock.to_array())
 
-            shutter_stock = ShutterStock(data)
-            shutter_stock_data.extend(shutter_stock.to_array())
-            adobe_stock = AdobeStock(data)
-            adobe_stock_data.extend(adobe_stock.to_array())
-
-            print(f'Add file: {f}')
+                print(f'Add file: {f}')
+            except Exception as ex:
+                print(f'Error file: {filename}{extension} - {ex}')
 
         self.export_to_csv(shutter_stock_data, config.SHUTTER_FILENAME, config.SHUTTER_HEADER)
         self.export_to_csv(adobe_stock_data, config.ADOBE_FILENAME, config.ADOBE_HEADER)
