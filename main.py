@@ -5,8 +5,8 @@ from os.path import join
 def run_public_domain_vectors():
     from spiders.publicdomainvectors import CsvGenerator
 
-    base_path = '/Volumes/GoogleDrive/Drive\'ım/Stock/Signs&Symbols'
-    init_num = 5
+    base_path = 'PATH'
+    init_num = 49
 
     path = join(base_path, f'{init_num}')
 
@@ -29,6 +29,6 @@ def run_country_flags():
 
 
 if __name__ == '__main__':
-    run_country_flags()
+    run_public_domain_vectors()
     print(f'[SUCCESS] Successfully completed.')
     exit(0)

@@ -4,10 +4,13 @@ SHUTTER_HEADER = ["Filename", "Description", "Keywords", "Categories", "Editoria
 ADOBE_FILENAME = 'adobestock_content_upload.csv'
 ADOBE_HEADER = ["Filename", "Title", "Keywords", "Category", "Releases"]
 
+FREEPIK_FILENAME = 'freepik_content_upload.csv'
+FREEPIK_HEADER = ["Filename", "Title", "Tags"]
+
+VECTEEZY_FILENAME = 'vecteezy_content_upload.csv'
+VECTEEZY_HEADER = ["Filename", "Title", "Keywords"]
+
 TAGS = [
-    "vector", "illustration", "design", "graphic", "art", "abstract", "background", "template", "element", "icon",
-    "logo", "colorful", "creative", "modern", "seamless", "pattern", "symbol", "web", "digital", "concept", "flat", 
-    "silhouette", "texture", "grunge", "ornament", "frame", "vintage", "retro", "technology", "nature", "business",
-    "decoration", "decorative", "banner", "infographic", "ecology", "health", "education", "music", "travel", "sports",
-    "food", "fashion", "beauty", "love", "wedding", "holiday", "christmas", "summer", "sale"
+    'illustration', 'isolated', 'background', 'design', 'digital', 'modern', 'shape', 'collection', 'white', 'drawing',
+    'abstract', 'color'
 ]

@@ -7,7 +7,7 @@ class ShutterStock:
             ",".join(
                 [
                     f'"{self.data["filename"]}.eps"',
-                    f'"{self.data["eps_title"].strip()}"',
+                    f'"{self.data["title"].strip()}"',
                     f'"{self.data["keywords"]}"',
                     f'"{self.data["category"]}"',
                     'no',
@@ -18,7 +18,7 @@ class ShutterStock:
             ",".join(
                 [
                     f'"{self.data["filename"]}.jpg"',
-                    f'"{self.data["jpg_title"].strip()}"',
+                    f'"{self.data["title"].strip()}"',
                     f'"{self.data["keywords"]}"',
                     f'"{self.data["category"]}"',
                     'no',
@@ -38,7 +38,7 @@ class AdobeStock:
             ",".join(
                 [
                     f'"{self.data["filename"]}.eps"',
-                    f'"{self.data["eps_title"].strip()}"',
+                    f'"{self.data["title"].strip()}"',
                     f'"{self.data["keywords"]}"',
                     f'{self.data["category_id"]}',
                     '""'
@@ -47,7 +47,7 @@ class AdobeStock:
             ",".join(
                 [
                     f'"{self.data["filename"]}.jpg"',
-                    f'"{self.data["jpg_title"].strip()}"',
+                    f'"{self.data["title"].strip()}"',
                     f'"{self.data["keywords"]}"',
                     f'{self.data["category_id"]}',
                     '""'
@@ -55,3 +55,48 @@ class AdobeStock:
             )
         ]
 
+
+class Freepik:
+    def __init__(self, data):
+        self.data = data
+
+    def to_array(self):
+        return [
+            ";".join(
+                [
+                    f'"{self.data["filename"]}.eps"',
+                    f'"{self.data["title"].strip()}"',
+                    f'"{self.data["keywords"]}"'
+                ]
+            ),
+            ";".join(
+                [
+                    f'"{self.data["filename"]}.jpg"',
+                    f'"{self.data["title"].strip()}"',
+                    f'"{self.data["keywords"]}"'
+                ]
+            )
+        ]
+
+
+class Vecteezy:
+    def __init__(self, data):
+        self.data = data
+
+    def to_array(self):
+        return [
+            ",".join(
+                [
+                    f'"{self.data["filename"]}.eps"',
+                    f'"{self.data["title"].strip()}"',
+                    f'"{self.data["keywords"]}"'
+                ]
+            ),
+            ",".join(
+                [
+                    f'"{self.data["filename"]}.jpg"',
+                    f'"{self.data["title"].strip()}"',
+                    f'"{self.data["keywords"]}"',
+                ]
+            )
+        ]
